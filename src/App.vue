@@ -1,36 +1,5 @@
 <template>
-  <div id="app">
-    <!-- 头部导航 -->
-    <header class="header">
-      <el-row>
-        <el-col :span="24">
-          <el-menu default-active="5" class="el-menu-demo" mode="horizontal" @select="">
-            <el-menu-item index="1">高级插件</el-menu-item>
-            <el-menu-item index="2">在线商城</el-menu-item>
-            <el-menu-item index="3">客户管理</el-menu-item>
-            <el-menu-item index="4">系统设置</el-menu-item>
-            <el-menu-item index="5">活动发布</el-menu-item>
-          </el-menu>
-        </el-col>
-      </el-row>
-    </header>
-    <div style="position: relative;height: 60px;width: 100%;"></div>
-
-    <main>
-      <!-- 左侧导航 -->
-      <div class="main-left">
-        <el-menu default-active="/activePublic" class="el-menu-vertical-demo" :router="true">
-          <el-menu-item index="/activePublic" :class="{'isActive': active}">活动发布</el-menu-item>
-          <el-menu-item index="/activeManage" :class="{'isActive': !active}">活动管理</el-menu-item>
-        </el-menu>
-      </div>
-
-      <!-- 右侧主内容区 -->
-      <div  class="main-right" >
-
-      </div>
-    </main>
-  </div>
+  <ve-line :data="chartData"></ve-line>
 </template>
 
 <script>
@@ -41,10 +10,19 @@
   Vue.use(Element)
 
   export default {
-    name: 'app',
-    data: function (){
+    data: function () {
       return {
-        active:true
+        chartData: {
+          columns: ['日期', '访问用户', '下单用户', '下单率'],
+          rows: [
+            { '日期': '1/1', '访问用户': 1393, '下单用户': 1093, '下单率': 0.32 },
+            { '日期': '1/2', '访问用户': 3530, '下单用户': 3230, '下单率': 0.26 },
+            { '日期': '1/3', '访问用户': 2923, '下单用户': 2623, '下单率': 0.76 },
+            { '日期': '1/4', '访问用户': 1723, '下单用户': 1423, '下单率': 0.49 },
+            { '日期': '1/5', '访问用户': 3792, '下单用户': 3492, '下单率': 0.323 },
+            { '日期': '1/6', '访问用户': 4593, '下单用户': 4293, '下单率': 0.78 }
+          ]
+        }
       }
     }
   }
