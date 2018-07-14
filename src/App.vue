@@ -11,7 +11,7 @@
     <div class="main-left">
       <el-menu default-active="/activePublic" class="el-menu-vertical-demo" :router="true">
         <el-menu-item index="/personalInformation" :class="{'isActive': !active}">个人资料</el-menu-item>
-        <el-menu-item index="/activeManage" :class="{'isActive': !active}">选课成绩</el-menu-item>
+        <el-menu-item index="/grade" :class="{'isActive': !active}">选课成绩</el-menu-item>
         <el-menu-item index="/activeManage" :class="{'isActive': !active}">获奖情况</el-menu-item>
         <el-menu-item index="/activeManage" :class="{'isActive': !active}">第二课堂</el-menu-item>
         <el-menu-item index="/activeManage" :class="{'isActive': !active}">借阅展示</el-menu-item>
