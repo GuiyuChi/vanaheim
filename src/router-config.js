@@ -2,6 +2,7 @@ import indexPage from './page/newOrExitInfoPage/index.vue'
 import socialPage from './page/socialPage/index.vue'
 import showInfoPage from './page/showInfoPage/yingjie.vue'
 import personalInformation from './page/personal-information.vue'
+import personalGuide from './page/personal-guide.vue'
 import grade from './page/grade.vue'
 
 export default [
@@ -10,5 +11,8 @@ export default [
   },
   {
     path:'/grade',component: grade,
+  },
+  {
+    path:'/personalGuide',component:personalGuide
   },
 ]
